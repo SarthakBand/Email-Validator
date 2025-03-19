@@ -3,17 +3,30 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding: 19px 12px;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 25px;
+    margin-right: 10px;
+    filter: invert(1);
 }
 
 ul {
@@ -22,91 +35,107 @@ ul {
 
 ul li {
     list-style: none;
-    padding: 0 13px;
+    padding: 0 15px;
 }
 
-ul li a{
+ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
 }
 
-ul >li> a:hover{
+ul li a:hover {
     color: rgb(192, 189, 205);
 }
 
-main{
-    min-height: 100vh; 
+/* Main Content */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
 }
 
-.logo img{
-    width: 15px;
-    filter: invert(1);
+.container {
+    max-width: 600px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
 }
 
-.container{ 
-    max-width: 80vw;
-    margin: auto;
-    padding: 9px 15px;
+.container h1, .container h2 {
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.container h1{
-    padding: 12px 0;
-}
-
-input[type='text']{
-    min-width: 23vw;
-    padding: 3px 12px;
+/* Input and Button */
+input[type='text'] {
+    width: 100%;
+    padding: 10px;
     border: 2px solid black;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.btn{
+.btn {
     background: black;
     color: white;
-    padding: 9px 12px;
-    border: 1px solid gray;
+    padding: 10px 15px;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
-#resultCont div::first-letter{
+.btn:hover {
+    background: #333;
+}
+
+#resultCont {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+}
+
+#resultCont div::first-letter {
     text-transform: uppercase;
 }
 
-footer{
+/* Footer */
+footer {
     font-size: 12px;
     background-color: black;
     color: white;
-    display: flex;
+    text-align: center;
     padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
 }
 
+/* Responsive Design */
 @media only screen and (max-width: 600px) {
-
-    .container{
-        font-size: 12px; 
-    }
-
-    input[type='text'] {
-        width: 100%; 
-    }
-
-    nav{
+    nav {
         flex-direction: column;
+        text-align: center;
     }
-    .logo{
-        padding: 6px 0;
-        font-size: 12px;
+    
+    ul {
+        flex-direction: column;
+        padding-top: 10px;
     }
-    .logo span{
-        font-size: 20px;
+    
+    .container {
+        width: 90%;
     }
-    .logo img{
-        width: 15px;
-        filter: invert(1);
-    }
-  }
+}

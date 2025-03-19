@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CheckMyMail</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/email.svg" alt="email svg">
+                <span>CheckMyMail</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Have questions or need support? Reach out to us!</p>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br><br>
+
+                <input class="btn" type="submit" value="Send Message">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        Copyright | checkmymail.com | All Rights Reserved
+    </footer>
+</body>
+</html>
